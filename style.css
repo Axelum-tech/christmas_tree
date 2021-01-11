@@ -1,0 +1,180 @@
+body{
+    background-color: #223;
+    color: white;
+    font-family: Arial;
+}
+
+
+h1,h2{
+    margin:0;
+    font-weight: 100;
+    text-align: center;
+}
+
+.tree{
+    width: 400px;
+    height: 700px;
+    border : 1px solid white;
+    margin: 20px auto;
+    text-align: center;
+    
+      
+}
+
+
+/* HW1: display: inline-block, table- 
+center element - without margin:auto
+
+
+    display: inline-block;
+    position: relative;
+    left: 470px;
+    top: 20px;
+    
+    Dar exista dezavantajul ca nu se adapateaza in functie de marimea ecranului*/
+    .tree >div:nth-child(5){
+        border-bottom: 150px green solid;
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+        position: relative;
+       
+    }
+    .tree >div:nth-child(4){
+        margin: 0px 70px;
+        border-bottom: 100px green solid;
+        border-left: 100px solid transparent;
+        border-right: 100px solid transparent;
+        position: relative;
+    }
+
+    .tree >div:nth-child(3){
+        margin: 0px 100px;
+        border-bottom: 80px green solid;
+        border-left: 80px solid transparent;
+        border-right: 80px solid transparent;
+        position: relative;
+    }
+    .tree >div:nth-child(2){
+        margin: 0px 120px;
+        border-bottom: 70px green solid;
+        border-left: 70px solid transparent;
+        border-right: 70px solid transparent;
+        position: relative;
+    }
+    .tree >div:nth-child(1){
+        margin: 0px 140px;
+        border-bottom: 60px green solid;
+        border-left: 60px solid transparent;
+        border-right: 60px solid transparent;
+        position: relative;
+    }
+    .tree>div{
+        font-size: 0;
+    }
+    .tree .ball{
+        position: absolute;
+        background-color:red;
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        
+    }
+    .tree>:nth-child(5)>.ball:nth-child(1){
+        top: 60px;
+        left:-20px
+    }
+    .tree>:nth-child(5)>.ball:nth-child(2){
+        top: 60px;
+        left:100px;
+    }
+    .tree>:nth-child(4)>.ball:nth-child(1){
+        top: 50px;
+        left:-20px
+    }
+    .tree>:nth-child(4)>.ball:nth-child(2){
+        top: 50px;
+        left:60px;}
+    .tree>:nth-child(3)>.ball:nth-child(1){
+        top: 40px;
+        left:-20px
+        }
+    .tree>:nth-child(3)>.ball:nth-child(2){
+        top: 40px;
+        left:40px;}
+
+    .tree>:nth-child(2)>.ball:nth-child(1){
+        top: 20px;
+        left:-20px;}
+    .tree>:nth-child(2)>.ball:nth-child(2){
+        top: 20px;
+        left:20px;}
+
+    .tree>:nth-child(1)>.star:nth-child(1){
+        width: 40px;
+        height: 40px;
+        background-color: rgba(255, 255, 0, 0.24);
+        position: relative;
+        left:-20px;
+        transform: rotate(45deg);
+        margin-top:20px;
+        z-index: -1;
+    }
+    .tree>:nth-child(1)>.star:nth-child(2){
+        width: 40px;
+        height: 40px;
+        background-color: rgba(238, 130, 238, 0.301);
+        position: absolute;
+        left:-20px;
+        top:20px;
+        transform: rotate(0deg);
+    }
+
+    .tree .on,.off{
+        background-color: saddlebrown;
+        font-size: 30px;
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .tree:target .star:nth-child(1){
+        /* background-color: cyan; */
+        animation: flashing1 1s infinite;
+    }
+    .tree:target .star:nth-child(2){
+        /* background-color: rgb(247, 0, 255); */
+        animation: flashing2 1s infinite;
+    }
+
+    .tree:target .ball{
+        animation: flashing_balls 1s infinite;
+    }
+
+    @keyframes flashing1{
+        from{
+            background-color: rgba(238, 130, 238, 0.301);
+        }
+        to{
+            background-color: cyan;
+        }
+    }
+    @keyframes flashing2{
+        from{
+            background-color: rgba(255, 255, 0, 0.24);
+        }
+        to{
+            background-color: rgba(255, 0, 191, 0.534);
+        }
+    }
+
+    @keyframes flashing_balls{
+        from{
+            background-color: red;
+        }
+        to{
+            background-color: cyan;
+        }
+    }
+
+
+
+    
